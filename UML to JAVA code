@@ -1,1 +1,24 @@
+interface Shape{
+  abstract double getArea();
+}
 
+class Rectangle implements Shape{
+  private double length;
+  private double width;
+  public double getArea(){return length*width;}
+  public String toString(){return String.ValueOf(this.getArea());}
+}
+
+class Triangle implements Shape{
+  private double base;
+  private double height;
+  public double getArea(){return base*height/2;}
+  public String toString(){return String.ValueOf(this.getArea());}
+}
+
+public static void main(String args[]){
+  Rectangle rectangle = new Rectangle(4.0,3.0);
+  System.out.println("This Rectangle Area is : ",rectangle.toString());
+  Triangle triangle = new Triangle(4.0,3.0);
+  System.out.println("This Triangle Area is : ",triangle.toString());
+}
